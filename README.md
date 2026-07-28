@@ -42,6 +42,18 @@ control. Each later asset must link to the decisions that authorize it and the
 constraints that apply to it. Verification evidence must show whether the
 implementation satisfies those constraints.
 
+A prompt or issue starts the process but does not become an authoritative
+decision by itself. The project first converts the request into accepted intent
+and requirements. A recorded design assessment determines whether the change
+needs a separate design document or can keep a short design record in the
+implementation plan. Before implementation, the project also checks which
+engineering policies apply, identifies missing policies, and creates a
+verification plan. Implementation tasks link to the specific references needed
+for their scope. Static checks, tests, and reviews produce a verification record
+with an explicit test conclusion. The
+[Daoji development lifecycle standard](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md)
+defines the complete process and the exit condition for each stage.
+
 ## Core thesis
 
 AI agents can implement tasks with a limited scope. AI agents cannot reliably
@@ -73,7 +85,9 @@ contains only documentation. The first implementation must use the
 document-based process that Daoji is designed to provide.
 
 The [Daoji project charter](docs/PROJECT_CHARTER.md) contains the initial
-project requirements and rules.
+project requirements and highest-priority rules. The
+[development lifecycle standard](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md) defines
+how the project applies those rules to a software change.
 
 ## Daoji self-development goal
 
@@ -89,6 +103,8 @@ The repository contains the following files:
 
 - `README.md`: introduces Daoji and the repository.
 - `docs/PROJECT_CHARTER.md`: defines the initial project requirements and rules.
+- `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`: defines the required software change
+  process and lifecycle exit conditions.
 - `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`: contains the
   version of the Google writing guidance that Daoji uses.
 
