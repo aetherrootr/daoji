@@ -25,9 +25,21 @@
 | [`README.md`](README.md) | 项目介绍和仓库概览 | 资料性入口 |
 | [`docs/references/`](references/) | 已采用配置和资料性外部参考 | 每份文档分别声明其状态 |
 | [`docs/translation/zh-CN/`](.) | 项目文档的简体中文视图 | 非权威译文 |
+| [`docs/changes/`](../../changes/) | 变更条目、计划、记录和摘要 | 每份文档分别声明其状态 |
+| [`docs/design/`](../../design/) | 架构和重要技术决策 | 每份文档分别声明其状态 |
+| [`docs/policies/`](../../policies/) | 可复用工程规则和质量门禁 | 每份文档分别声明其状态 |
 
 ## 当前权威文档图
 
 项目章程要求项目遵循文档标准和开发生命周期标准。文档标准采用仓库中的 Google 风格指南配置作为较低优先级的编辑指导。开发生命周期标准将章程和文档规则应用于每项变更，并将变更条目链接到其详细生命周期资产。
 
-仓库目前尚无单独的需求、设计、政策、运维或变更记录目录。项目创建这些关键路径时，将其添加到本地图。移动、替换或删除已映射路径的变更必须更新本地图。
+初始脚手架变更将其意图、需求、计划、记录和摘要合并在
+[`docs/changes/0001-engineering-scaffold.md`](../../changes/0001-engineering-scaffold.md)
+中。该条目链接到单独的架构决策和 Rust 工程政策。移动、替换或删除已映射路径的
+变更必须更新本地图。
+
+相关简体中文译文：
+
+- [工程脚手架变更](changes/0001-engineering-scaffold.md)
+- [初始 Rust 架构](design/0001-initial-rust-architecture.md)
+- [Rust 工程政策](policies/RUST_ENGINEERING_POLICY.md)
