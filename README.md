@@ -86,6 +86,8 @@ document-based process that Daoji is designed to provide.
 
 The [Daoji project charter](docs/PROJECT_CHARTER.md) contains the initial
 project requirements and highest-priority rules. The
+[documentation standard](docs/DOCUMENTATION_STANDARD.md) defines how project
+documents are structured, limited, linked, indexed, and reviewed. The
 [development lifecycle standard](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md) defines
 how the project applies those rules to a software change.
 
@@ -97,12 +99,20 @@ That version validates and coordinates later changes. The project
 achieves this goal only when the workflow requires review by a person and
 records each decision so that a person can audit it later.
 
-## Repository layout
+## Document map
 
-The repository contains the following files:
+The root [Daoji document map](DOCUMENT_MAP.md) is the primary index for people
+and agents. It identifies governing documents, translations, references, and
+future engineering-asset paths without requiring a reader to load the complete
+repository.
+
+The current key files are:
 
 - `README.md`: introduces Daoji and the repository.
+- `DOCUMENT_MAP.md`: maps governing documents and key repository paths.
 - `docs/PROJECT_CHARTER.md`: defines the initial project requirements and rules.
+- `docs/DOCUMENTATION_STANDARD.md`: defines required documentation structure,
+  length budgets, progressive disclosure, linking, writing, and review.
 - `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`: defines the required software change
   process and lifecycle exit conditions.
 - `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`: contains the
