@@ -1,6 +1,6 @@
 # Google 开发者文档风格指南：Daoji 配置
 
-> 本文档为非权威的简体中文翻译。请参阅[英文原文](../../references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)；如有语义冲突，以英文原文为准。
+> 本文档为非权威的简体中文翻译。请参阅[英文原文](../../../references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)；如有语义冲突，以英文原文为准。
 
 状态：已采用
 

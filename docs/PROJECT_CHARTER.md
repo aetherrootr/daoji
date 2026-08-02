@@ -4,6 +4,10 @@ Status: Effective draft 0
 
 Document type: Project charter
 
+Length assessment: This charter keeps the initial project rules together so
+that readers can evaluate their priority and consistency. Readers should use
+the section headings and follow the linked standards for operational detail.
+
 Required use: Until an accepted revision replaces this charter, project work
 must follow this charter.
 
@@ -203,72 +207,17 @@ must not accept that capability. If the implementation and authoritative
 documentation disagree, the project must record a defect. The project must
 resolve the conflict through the documented change process.
 
-### Clarity for people and agents
+### Documentation governance
 
-An authoritative document must provide the same information to people and
-software agents. Metadata can help automated interpretation, but metadata must
-not conceal information from people. Prose must not require implied
-information, private context, or unstated conventions.
+The [Daoji documentation standard](DOCUMENTATION_STANDARD.md) defines the
+required structure, length budgets, progressive disclosure, document graph,
+repository map, language, review, and maintenance rules for all
+project-maintained documentation. Project work must follow that standard.
 
-If requirements for readability by people and agents conflict, the document
-must state the conflict. It must use explicit structure, definitions, examples,
-or generated views from one authoritative document. The project must not
-maintain independent documents for people and agents that can become
-inconsistent.
-
-### English writing rules
-
-The project initially writes its documents in English. When a translation has a
-different meaning, the English document is authoritative.
-Daoji uses a controlled technical style inspired by ASD Simplified Technical
-English and practices for structured technical publications. Unless a later
-policy defines and verifies compliance, the project must not state that Daoji
-complies with ASD-STE100, ATA iSpec 2200, or another external standard.
-
-The following requirements apply to authoritative documents:
-
-- Use US English.
-- Use one term for one concept, and define project-specific terms.
-- Use short, direct sentences that express one primary requirement or idea.
-- Use standard subject-verb-object word order when possible.
-- Use present tense for general behavior.
-- Prefer active voice, and identify the actor responsible for an action.
-- Put a condition before the instruction that depends on the condition.
-- Make conditions, scope, exceptions, and priority explicit.
-- Define abbreviations on first use, and avoid unnecessary abbreviations.
-- Avoid phrasal verbs, jargon, idioms, rhetorical language, culture-specific
-  references, and humor when a simpler expression is available.
-- Avoid ambiguous pronouns and references such as "this" when the referent is
-  not explicit.
-- Repeat a noun or helper word when the repetition prevents ambiguity.
-- Use sentence case for titles and headings.
-- Use parallel structure, capitalization, and punctuation in lists.
-- Use inclusive and accessible language.
-- Use examples to clarify rules without allowing examples to become rules.
-- Use `must` for requirements, `should` for recommendations, `may` for
-  permission, and `will` only for an event that occurs in the future.
-- Prefer wording that preserves meaning under machine translation.
-
-Clarity takes priority over stylistic variety. Use precise language, but do not
-add unnecessary complexity.
-
-The repository copy of the
-[Google developer documentation style guide](references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)
-is the default editorial standard for Daoji documentation. The repository
-copy records its source review date and upstream sources. A change to an
-upstream source does not become a project requirement until the project updates
-and accepts the repository copy.
-
-Authors and reviewers must apply writing rules in the following priority order:
-
-1. This charter
-2. Accepted project-specific policies
-3. The repository copy of the Google developer documentation style guide
-4. Other external references
-
-The controlled-English and machine-translation requirements in this charter
-have priority over conflicting guidance in the Google guide. The project must
-record the reason for each deliberate exception to an applicable rule.
+The standard must preserve one controlling source for people and agents, use
+precise and translatable English for authoritative documents, and require
+documentation to remain reachable from the root document map. This charter has
+priority if it conflicts with the documentation standard.
 
 ## Lifecycle stages and exit conditions
 
@@ -299,9 +248,10 @@ It must complete the implementation record, verification record, and change
 summary before it accepts or merges the implemented change.
 
 The [Daoji development lifecycle standard](DEVELOPMENT_LIFECYCLE_STANDARD.md)
-defines the workflow, document-tailoring rules, progressive disclosure,
-engineering policy assessment, stage requirements, verification layers, and
-exit conditions. Project work must follow that standard.
+defines the workflow, lifecycle document-tailoring rules, engineering policy
+assessment, stage requirements, verification layers, and exit conditions.
+Project work must follow that standard and the
+[documentation standard](DOCUMENTATION_STANDARD.md).
 
 ## Initial engineering asset model
 
@@ -329,9 +279,8 @@ Daoji must represent at least the following engineering asset classes:
 A later design document must define the file formats and metadata schema. After
 the project accepts that design, each engineering asset must have a permanent
 identifier, a defined lifecycle status, a named owner, a revision history, and
-links to related assets. Each link must state the type of relationship. Each
-authoritative document must also identify its purpose, intended audience, scope,
-and the software or decisions to which it applies.
+links to related assets. Each link must state the type of relationship. The
+documentation standard defines the interim document metadata and linking rules.
 
 Before the project accepts the metadata schema, each engineering asset must have
 a repository path or other stable location. Each authoritative document must
@@ -431,17 +380,9 @@ apply:
    incomplete agent work as accepted.
 10. When implementation behavior changes, the same proposed change must include
     the required documentation and verification updates.
-11. Before writing a document that is intended to become authoritative, identify
-    its audience and purpose.
-12. Review documents for technical accuracy, audience clarity, and consistent
-    language. Increase the review effort when errors in a document can cause
-    greater harm or when the document affects more users or components.
-13. Documents must contain all information required for their stated purpose,
-    but no unnecessary information.
-14. Track documentation defects and outdated documents as engineering defects.
-15. Maintain one authoritative document for each requirement. Unless a tool
-    generates copies from the authoritative document, do not create duplicate
-    requirements.
+
+The [documentation standard](DOCUMENTATION_STANDARD.md) controls documentation
+creation, writing, linking, review, maintenance, and defect handling.
 
 These initial policies do not form a complete implementation policy set. The
 [development lifecycle standard](DEVELOPMENT_LIFECYCLE_STANDARD.md#current-engineering-policy-gaps)

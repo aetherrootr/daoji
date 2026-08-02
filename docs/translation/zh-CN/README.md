@@ -1,6 +1,6 @@
 # Daoji
 
-> 本文档为非权威的简体中文翻译。请参阅[英文原文](../../README.md)；如有语义冲突，以英文原文为准。
+> 本文档为非权威的简体中文翻译。请参阅[英文原文](../../../README.md)；如有语义冲突，以英文原文为准。
 
 **由明确的工程文档控制的软件开发。**
 
@@ -72,6 +72,8 @@ Daoji 正处于初始文档阶段。本仓库有意仅包含文档。首次实�
 提供的文档化过程。
 
 [Daoji 项目章程](PROJECT_CHARTER.md)包含初始项目需求和最高优先级规则。
+[文档标准](DOCUMENTATION_STANDARD.md)定义项目文档的结构、长度限制、链接、索引和
+评审方式。
 [开发生命周期标准](DEVELOPMENT_LIFECYCLE_STANDARD.md)定义了项目如何将这些规则
 应用于软件变更。
 
@@ -81,16 +83,20 @@ Daoji 应该逐步使用自身工作流来规划、实施和验证对 Daoji 的�
 第一个可执行版本。该版本验证并协调后续变更。只有当工作流要求由人员进行评审，并
 记录每项决策以便人员日后审计时，项目才能实现这一目标。
 
-## 仓库布局
+## 文档地图
 
-仓库包含以下文件：
+根目录中的 [Daoji 文档地图](DOCUMENT_MAP.md)是面向人和智能体的主要索引。它标明
+治理文档、译文、参考资料和未来工程资产路径，使读者无需加载整个仓库。
+
+当前关键文件包括：
 
 - `README.md`：介绍 Daoji 和本仓库。
+- `DOCUMENT_MAP.md`：映射治理文档和关键仓库路径。
 - `docs/PROJECT_CHARTER.md`：定义初始项目需求和规则。
+- `docs/DOCUMENTATION_STANDARD.md`：定义必需的文档结构、长度预算、渐进式披露、
+  链接、写作和评审规则。
 - `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`：定义必需的软件变更过程和生命周期
   退出条件。
-- `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`：包含 Daoji
-  采用的 Google 写作指南版本。
 
 项目尚未选择实施语言、AI 智能体提供商或运行时架构。项目在选择这些技术之前，
 必须记录其需求和设计。
