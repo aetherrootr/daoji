@@ -80,9 +80,9 @@ designed to provide the following capabilities:
 
 ## Current status
 
-Daoji is in its initial documentation phase. The repository intentionally
-contains only documentation. The first implementation must use the
-document-based process that Daoji is designed to provide.
+Daoji is beginning its Level 1 implementation. The repository contains a
+minimal Rust command-line scaffold and the authoritative documents that permit
+and constrain it. The first functional document validator remains future work.
 
 The [Daoji project charter](docs/PROJECT_CHARTER.md) contains the initial
 project requirements and highest-priority rules. The
@@ -118,6 +118,24 @@ The current key files are:
 - `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`: contains the
   version of the Google writing guidance that Daoji uses.
 
-The project has not selected an implementation language, AI agent provider, or
-runtime architecture. The project must document its requirements and design
-before it selects these technologies.
+Rust is the accepted language for the initial core model, validation,
+coordination, and command-line interface. The project has not selected an
+architecture or toolchain for unspecified future components. See the
+[initial Rust architecture decision](docs/design/0001-initial-rust-architecture.md).
+
+## Development
+
+Install the toolchain declared in `rust-toolchain.toml`. Run the local quality
+checks from narrowest to broadest:
+
+```text
+cargo fmt --all --check
+cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+cargo test --workspace --all-targets --all-features --locked
+cargo doc --workspace --all-features --no-deps
+cargo build --workspace --all-features --locked --release
+```
+
+CI also enforces line coverage, dependency advisories, licenses, sources, and
+cross-platform tests. The commands and thresholds are controlled by the
+[Rust engineering policy](docs/policies/RUST_ENGINEERING_POLICY.md).

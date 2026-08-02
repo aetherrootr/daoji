@@ -26,6 +26,9 @@ otherwise.
 | [`README.md`](README.md) | Project introduction and repository overview | Informative entry point |
 | [`docs/references/`](docs/references/) | Adopted profiles and informative external references | Each document states its status |
 | [`docs/translation/zh-CN/`](docs/translation/zh-CN/) | Simplified Chinese views of project documents | Non-authoritative translations |
+| [`docs/changes/`](docs/changes/) | Change entries, plans, records, and summaries | Each document states its status |
+| [`docs/design/`](docs/design/) | Architecture and important technical decisions | Each document states its status |
+| [`docs/policies/`](docs/policies/) | Reusable engineering rules and quality gates | Each document states its status |
 
 ## Current authoritative graph
 
@@ -35,10 +38,13 @@ profile as lower-priority editorial guidance. The development lifecycle
 standard applies the charter and documentation rules to each change and links
 change entries to their detailed lifecycle assets.
 
-The repository does not yet contain separate requirement, design, policy,
-operation, or change-record directories. Add those key paths here when the
-project creates them. A change that moves, replaces, or removes a mapped path
-must update this map.
+The initial scaffold change combines its intent, requirements, plans, records,
+and summary in
+[`docs/changes/0001-engineering-scaffold.md`](docs/changes/0001-engineering-scaffold.md).
+Its separate architecture decision and Rust engineering policy are linked from
+that entry. A change that moves, replaces, or removes a mapped path must update
+this map.
+
 
 ## Translations
 

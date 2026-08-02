@@ -1,0 +1,28 @@
+[package]
+name = "daoji"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.85.1"
+description = "Document-defined coordination for AI-assisted software engineering"
+license = "Apache-2.0"
+repository = "https://github.com/aetherrootr/daoji"
+publish = false
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "deny"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+nursery = { level = "deny", priority = -1 }
+cargo = { level = "deny", priority = -1 }
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "deny"
+missing_const_for_fn = "allow"
+multiple_crate_versions = "allow"

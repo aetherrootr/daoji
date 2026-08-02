@@ -68,8 +68,8 @@ Daoji 使用仓库作为其权威项目记录。Daoji 旨在提供以下能力�
 
 ## 当前状态
 
-Daoji 正处于初始文档阶段。本仓库有意仅包含文档。首次实施必须采用 Daoji 旨在
-提供的文档化过程。
+Daoji 正在开始实施 Level 1。本仓库包含一个最小 Rust 命令行脚手架，以及允许并
+约束该脚手架的权威文档。首个具有实际功能的文档验证器仍属于后续工作。
 
 [Daoji 项目章程](PROJECT_CHARTER.md)包含初始项目需求和最高优先级规则。
 [文档标准](DOCUMENTATION_STANDARD.md)定义项目文档的结构、长度限制、链接、索引和
@@ -98,5 +98,20 @@ Daoji 应该逐步使用自身工作流来规划、实施和验证对 Daoji 的�
 - `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`：定义必需的软件变更过程和生命周期
   退出条件。
 
-项目尚未选择实施语言、AI 智能体提供商或运行时架构。项目在选择这些技术之前，
-必须记录其需求和设计。
+初始核心模型、验证、协调和命令行界面使用 Rust。项目尚未选择用于未规定未来组件的
+架构或工具链。参见[初始 Rust 架构决策](../../design/0001-initial-rust-architecture.md)。
+
+## 开发
+
+安装 `rust-toolchain.toml` 声明的工具链。按照从窄到宽的顺序运行本地质量检查：
+
+```text
+cargo fmt --all --check
+cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+cargo test --workspace --all-targets --all-features --locked
+cargo doc --workspace --all-features --no-deps
+cargo build --workspace --all-features --locked --release
+```
+
+CI 还会强制检查行覆盖率、依赖项公告、许可证、来源和跨平台测试。命令和阈值由
+[Rust 工程政策](../../policies/RUST_ENGINEERING_POLICY.md)控制。
