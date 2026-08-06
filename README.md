@@ -91,6 +91,11 @@ documents are structured, limited, linked, indexed, and reviewed. The
 [development lifecycle standard](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md) defines
 how the project applies those rules to a software change.
 
+Rust is the accepted language for the initial core model, validation,
+coordination, and command-line interface. The project has not selected an
+architecture or toolchain for unspecified future components. See the
+[initial Rust architecture decision](docs/design/0001-initial-rust-architecture.md).
+
 ## Daoji self-development goal
 
 Daoji should gradually use its own workflow to plan, implement, and verify
@@ -99,29 +104,102 @@ That version validates and coordinates later changes. The project
 achieves this goal only when the workflow requires review by a person and
 records each decision so that a person can audit it later.
 
+## Roadmap
+
+This roadmap is informative and records the intended delivery order. It does
+not replace accepted requirements, designs, policies, or plans. Each item must
+enter the [Daoji development lifecycle](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)
+before implementation. The project can revise later items when evidence from an
+earlier item changes their requirements or design.
+
+- [ ] **Build the authoritative project-record core.** Define the engineering
+  asset schema, identifiers, lifecycle states, typed links, precedence rules,
+  and evidence model. Implement deterministic validation for document
+  structure, metadata, links, state transitions, policy rules, and traceability.
+  Completion means that later Daoji changes can require this validator as a
+  quality gate.
+- [ ] **Complete the document lifecycle in a local TUI.** Build a text user
+  interface (TUI) for project-resident documents. Support focused editing,
+  document-graph navigation, validation feedback, status views, human approval
+  gates, and recovery from interrupted work. Guide a change from intent through
+  accepted implementation and verification plans, then through records and the
+  final change summary. This stage prepares and reviews work but does not yet
+  invoke an agent automatically. Completion means that Daoji can use the TUI to
+  define its own next executable change.
+- [ ] **Connect external project documents to the TUI.** Add explicit adapters
+  for external issues, specifications, decision records, and evidence. Preserve
+  source identity and revisions, show synchronization and conflict state, and
+  require a person to resolve authority conflicts. External sources remain
+  inputs or navigation aids unless an accepted design and policy makes them
+  part of the authoritative project record. Completion means that an external
+  request can enter the local lifecycle without losing provenance or approval.
+- [ ] **Coordinate agent work and achieve routine self-development.** Convert
+  accepted plans into provider-neutral, scoped agent tasks with minimum
+  sufficient context, permissions, constraints, outputs, and completion
+  criteria. Define the common agent adapter contract for capability discovery,
+  invocation, context delivery, permission mapping, events, cancellation,
+  recovery, and normalized work results. Add tool and process isolation,
+  single-agent and multi-agent coordination, verification execution, evidence
+  retention, and recovery from incomplete work. Keep human approval at
+  important decision points and require independent verification of Daoji.
+  Completion means that routine Daoji changes use Daoji from intent through an
+  auditable change summary.
+- [ ] **Integrate the `pi` agent.** Map `pi` capabilities, sessions,
+  permissions, tool events, cancellation, errors, and work results to the Daoji
+  adapter contract. Add conformance and end-to-end tests with representative
+  scoped tasks. Completion means that Daoji can execute and audit an accepted
+  task through `pi`.
+- [ ] **Integrate Claude Code.** Map Claude Code authentication, capabilities,
+  sessions, permissions, tool events, cancellation, errors, and work results to
+  the Daoji adapter contract. Add conformance and end-to-end tests with
+  representative scoped tasks. Completion means that Daoji can execute and
+  audit an accepted task through Claude Code.
+- [ ] **Integrate Codex CLI.** Map Codex CLI authentication, capabilities,
+  sessions, permissions, tool events, cancellation, errors, and work results to
+  the Daoji adapter contract. Add conformance and end-to-end tests with
+  representative scoped tasks. Completion means that Daoji can execute and
+  audit an accepted task through Codex CLI.
+- [ ] **Integrate Kimi Code.** Map Kimi Code authentication, capabilities,
+  sessions, permissions, tool events, cancellation, errors, and work results to
+  the Daoji adapter contract. Add conformance and end-to-end tests with
+  representative scoped tasks. Completion means that Daoji can execute and
+  audit an accepted task through Kimi Code.
+- [ ] **Web development environment: support controlled remote development.**
+  Expose the same document graph and lifecycle engine through a web interface.
+  Add authenticated projects, isolated remote workspaces, resumable sessions,
+  review and approval flows, streamed task and verification results, audit
+  records, and controlled secret access. Define tenancy, privacy, retention,
+  reliability, deployment, and operations policies before implementation.
+- [ ] **Native macOS client: provide an integrated desktop workflow.** Reuse
+  the accepted core formats and protocols. Add native project and document
+  navigation, local workspace and keychain integration, notifications,
+  accessibility, offline operation, signed distribution, updates, and recovery.
+  Select the UI architecture only after macOS requirements and trade-offs are
+  accepted.
+- [ ] **Native Linux client: provide a distribution-portable desktop
+  workflow.** Reuse the same accepted core formats and protocols while defining
+  desktop integration, credential storage, sandboxing, packaging, updates,
+  accessibility, and support boundaries across selected Linux environments.
+  Select the toolkit and package formats only after the supported environments
+  and release policy are accepted.
+
 ## Document map
 
-The root [Daoji document map](DOCUMENT_MAP.md) is the primary index for people
-and agents. It identifies governing documents, translations, references, and
-future engineering-asset paths without requiring a reader to load the complete
-repository.
+The [Daoji document map](DOCUMENT_MAP.md) is the primary documentation entry
+point for people and agents. It identifies governing documents, designs,
+engineering policies, change records, references, and translations, and it
+distinguishes their authority.
 
-The current key files are:
+When starting work:
 
-- `README.md`: introduces Daoji and the repository.
-- `DOCUMENT_MAP.md`: maps governing documents and key repository paths.
-- `docs/PROJECT_CHARTER.md`: defines the initial project requirements and rules.
-- `docs/standards/DOCUMENTATION_STANDARD.md`: defines required documentation structure,
-  length budgets, progressive disclosure, linking, writing, and review.
-- `docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md`: defines the required software change
-  process and lifecycle exit conditions.
-- `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`: contains the
-  version of the Google writing guidance that Daoji uses.
-
-Rust is the accepted language for the initial core model, validation,
-coordination, and command-line interface. The project has not selected an
-architecture or toolchain for unspecified future components. See the
-[initial Rust architecture decision](docs/design/0001-initial-rust-architecture.md).
+- Read the [project charter](docs/PROJECT_CHARTER.md) for the project purpose,
+  scope, priorities, and highest-level rules.
+- Read the [development lifecycle standard](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)
+  when you plan, implement, or verify a change.
+- Read the [documentation standard](docs/standards/DOCUMENTATION_STANDARD.md)
+  when you create, review, or maintain project documentation.
+- Use the [complete document map](DOCUMENT_MAP.md) to locate designs,
+  engineering policies, change records, and other project information.
 
 ## Development
 
