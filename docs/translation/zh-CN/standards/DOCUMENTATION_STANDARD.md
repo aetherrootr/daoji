@@ -1,12 +1,12 @@
 # Daoji 文档标准
 
-> 本文档是非权威的简体中文翻译。请参阅[英文原文](../../DOCUMENTATION_STANDARD.md)；如有语义冲突，以英文原文为准。
+> 本文档是非权威的简体中文翻译。请参阅[英文原文](../../../standards/DOCUMENTATION_STANDARD.md)；如有语义冲突，以英文原文为准。
 
 状态：生效草案 0
 
 文档类型：文档标准
 
-强制使用：[Daoji 项目章程](PROJECT_CHARTER.md)要求所有由项目维护的文档遵循本标准。如果文档冲突，以章程为准。
+强制使用：[Daoji 项目章程](../PROJECT_CHARTER.md)要求所有由项目维护的文档遵循本标准。如果文档冲突，以章程为准。
 
 ## 目的
 
@@ -89,7 +89,7 @@
 
 ## 仓库文档地图
 
-项目必须在仓库根目录维护 [`DOCUMENT_MAP.md`](../../../DOCUMENT_MAP.md)，作为面向人和智能体的主要文档索引。地图是入口，而不是每个文件的重复目录。
+项目必须在仓库根目录维护 [`DOCUMENT_MAP.md`](../../../../DOCUMENT_MAP.md)，作为面向人和智能体的主要文档索引。地图是入口，而不是每个文件的重复目录。
 
 地图必须：
 
@@ -121,7 +121,7 @@
 - 使用 `must` 表示“必须”的要求，使用 `should` 表示“应该”的建议，使用 `may` 表示“可以”的许可；仅使用 `will` 表示将来事件。
 - 优先使用在机器翻译中能保留含义的措辞。
 
-清晰性优先于文体多样性。项目采用的 [Google 开发者文档风格指南配置](references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)提供额外编辑规则。
+清晰性优先于文体多样性。项目采用的 [Google 开发者文档风格指南配置](../references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)提供额外编辑规则。
 
 作者和评审者必须按以下顺序应用文档规则：
 

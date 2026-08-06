@@ -51,7 +51,7 @@ engineering policies apply, identifies missing policies, and creates a
 verification plan. Implementation tasks link to the specific references needed
 for their scope. Static checks, tests, and reviews produce a verification record
 with an explicit test conclusion. The
-[Daoji development lifecycle standard](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md)
+[Daoji development lifecycle standard](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)
 defines the complete process and the exit condition for each stage.
 
 ## Core thesis
@@ -86,9 +86,9 @@ and constrain it. The first functional document validator remains future work.
 
 The [Daoji project charter](docs/PROJECT_CHARTER.md) contains the initial
 project requirements and highest-priority rules. The
-[documentation standard](docs/DOCUMENTATION_STANDARD.md) defines how project
+[documentation standard](docs/standards/DOCUMENTATION_STANDARD.md) defines how project
 documents are structured, limited, linked, indexed, and reviewed. The
-[development lifecycle standard](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md) defines
+[development lifecycle standard](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md) defines
 how the project applies those rules to a software change.
 
 ## Daoji self-development goal
@@ -111,9 +111,9 @@ The current key files are:
 - `README.md`: introduces Daoji and the repository.
 - `DOCUMENT_MAP.md`: maps governing documents and key repository paths.
 - `docs/PROJECT_CHARTER.md`: defines the initial project requirements and rules.
-- `docs/DOCUMENTATION_STANDARD.md`: defines required documentation structure,
+- `docs/standards/DOCUMENTATION_STANDARD.md`: defines required documentation structure,
   length budgets, progressive disclosure, linking, writing, and review.
-- `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`: defines the required software change
+- `docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md`: defines the required software change
   process and lifecycle exit conditions.
 - `docs/references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md`: contains the
   version of the Google writing guidance that Daoji uses.

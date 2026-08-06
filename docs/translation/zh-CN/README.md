@@ -43,7 +43,7 @@ Daoji 并非旨在取代生成代码的 AI 智能体，而是旨在提供控制�
 实施计划中保留一份简短的设计记录。在实施之前，项目还会检查适用的工程政策、识别
 缺失的政策并创建验证计划。实施任务会链接到其范围所需的具体参考资料。静态检查、
 测试和评审会生成带有明确测试结论的验证记录。
-[Daoji 开发生命周期标准](DEVELOPMENT_LIFECYCLE_STANDARD.md)定义了完整过程以及
+[Daoji 开发生命周期标准](standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)定义了完整过程以及
 每个阶段的退出条件。
 
 ## 核心论点
@@ -72,9 +72,9 @@ Daoji 正在开始实施 Level 1。本仓库包含一个最小 Rust 命令行脚
 约束该脚手架的权威文档。首个具有实际功能的文档验证器仍属于后续工作。
 
 [Daoji 项目章程](PROJECT_CHARTER.md)包含初始项目需求和最高优先级规则。
-[文档标准](DOCUMENTATION_STANDARD.md)定义项目文档的结构、长度限制、链接、索引和
+[文档标准](standards/DOCUMENTATION_STANDARD.md)定义项目文档的结构、长度限制、链接、索引和
 评审方式。
-[开发生命周期标准](DEVELOPMENT_LIFECYCLE_STANDARD.md)定义了项目如何将这些规则
+[开发生命周期标准](standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)定义了项目如何将这些规则
 应用于软件变更。
 
 ## Daoji 自我开发目标
@@ -93,9 +93,9 @@ Daoji 应该逐步使用自身工作流来规划、实施和验证对 Daoji 的�
 - `README.md`：介绍 Daoji 和本仓库。
 - `DOCUMENT_MAP.md`：映射治理文档和关键仓库路径。
 - `docs/PROJECT_CHARTER.md`：定义初始项目需求和规则。
-- `docs/DOCUMENTATION_STANDARD.md`：定义必需的文档结构、长度预算、渐进式披露、
+- `docs/standards/DOCUMENTATION_STANDARD.md`：定义必需的文档结构、长度预算、渐进式披露、
   链接、写作和评审规则。
-- `docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`：定义必需的软件变更过程和生命周期
+- `docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md`：定义必需的软件变更过程和生命周期
   退出条件。
 
 初始核心模型、验证、协调和命令行界面使用 Rust。项目尚未选择用于未规定未来组件的

@@ -209,7 +209,7 @@ resolve the conflict through the documented change process.
 
 ### Documentation governance
 
-The [Daoji documentation standard](DOCUMENTATION_STANDARD.md) defines the
+The [Daoji documentation standard](standards/DOCUMENTATION_STANDARD.md) defines the
 required structure, length budgets, progressive disclosure, document graph,
 repository map, language, review, and maintenance rules for all
 project-maintained documentation. Project work must follow that standard.
@@ -247,11 +247,11 @@ The project must accept the controlling documents before implementation starts.
 It must complete the implementation record, verification record, and change
 summary before it accepts or merges the implemented change.
 
-The [Daoji development lifecycle standard](DEVELOPMENT_LIFECYCLE_STANDARD.md)
+The [Daoji development lifecycle standard](standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)
 defines the workflow, lifecycle document-tailoring rules, engineering policy
 assessment, stage requirements, verification layers, and exit conditions.
 Project work must follow that standard and the
-[documentation standard](DOCUMENTATION_STANDARD.md).
+[documentation standard](standards/DOCUMENTATION_STANDARD.md).
 
 ## Initial engineering asset model
 
@@ -381,11 +381,11 @@ apply:
 10. When implementation behavior changes, the same proposed change must include
     the required documentation and verification updates.
 
-The [documentation standard](DOCUMENTATION_STANDARD.md) controls documentation
+The [documentation standard](standards/DOCUMENTATION_STANDARD.md) controls documentation
 creation, writing, linking, review, maintenance, and defect handling.
 
 These initial policies do not form a complete implementation policy set. The
-[development lifecycle standard](DEVELOPMENT_LIFECYCLE_STANDARD.md#current-engineering-policy-gaps)
+[development lifecycle standard](standards/DEVELOPMENT_LIFECYCLE_STANDARD.md#current-engineering-policy-gaps)
 records the known gaps and defines how each change checks policy completeness.
 
 ## First documentation cycle

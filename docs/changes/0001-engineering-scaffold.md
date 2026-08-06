@@ -108,7 +108,7 @@ traceability from ES-001 through ES-005 to design, policy, tasks, and checks.
 
 References: this document; the architecture decision; the Rust policy; the
 [project charter](../PROJECT_CHARTER.md); the
-[development lifecycle standard](../DEVELOPMENT_LIFECYCLE_STANDARD.md).
+[development lifecycle standard](../standards/DEVELOPMENT_LIFECYCLE_STANDARD.md).
 
 ### AT-002: Create minimal Rust assets
 

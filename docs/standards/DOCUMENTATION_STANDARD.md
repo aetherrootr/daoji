@@ -4,7 +4,7 @@ Status: Effective draft 0
 
 Document type: Documentation standard
 
-Required use: The [Daoji project charter](PROJECT_CHARTER.md) requires all
+Required use: The [Daoji project charter](../PROJECT_CHARTER.md) requires all
 project-maintained documentation to follow this standard. The charter has
 priority if the documents conflict.
 
@@ -146,7 +146,7 @@ replaces when history alone does not make the relationship clear.
 
 ## Repository document map
 
-The project must maintain [`DOCUMENT_MAP.md`](../DOCUMENT_MAP.md) at the
+The project must maintain [`DOCUMENT_MAP.md`](../../DOCUMENT_MAP.md) at the
 repository root as the primary documentation index for people and agents. The
 map is an entry point, not a duplicate table of contents for every file.
 
@@ -192,7 +192,7 @@ The following rules apply:
 - Prefer wording that preserves meaning under machine translation.
 
 Clarity takes priority over stylistic variety. The adopted
-[Google developer documentation style guide profile](references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)
+[Google developer documentation style guide profile](../references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)
 provides additional editorial rules.
 
 Authors and reviewers must apply documentation rules in this order:

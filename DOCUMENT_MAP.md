@@ -16,8 +16,8 @@ otherwise.
 | Path | Role | Start here when |
 | --- | --- | --- |
 | [`docs/PROJECT_CHARTER.md`](docs/PROJECT_CHARTER.md) | Highest-priority project purpose, principles, and rules | Resolving authority, scope, or a project-level conflict |
-| [`docs/DOCUMENTATION_STANDARD.md`](docs/DOCUMENTATION_STANDARD.md) | Required structure, length, linking, indexing, writing, and review rules for documentation | Creating, splitting, linking, reviewing, or maintaining a document |
-| [`docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`](docs/DEVELOPMENT_LIFECYCLE_STANDARD.md) | Required software-change stages, assets, verification, and exit conditions | Planning or executing a project change |
+| [`docs/standards/DOCUMENTATION_STANDARD.md`](docs/standards/DOCUMENTATION_STANDARD.md) | Required structure, length, linking, indexing, writing, and review rules for documentation | Creating, splitting, linking, reviewing, or maintaining a document |
+| [`docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md`](docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md) | Required software-change stages, assets, verification, and exit conditions | Planning or executing a project change |
 
 ## Supporting paths
 

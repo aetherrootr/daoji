@@ -15,8 +15,8 @@
 | 路径 | 作用 | 从此处开始的场景 |
 | --- | --- | --- |
 | [`docs/PROJECT_CHARTER.md`](PROJECT_CHARTER.md) | 最高优先级的项目目的、原则和规则 | 处理权威性、范围或项目级冲突 |
-| [`docs/DOCUMENTATION_STANDARD.md`](DOCUMENTATION_STANDARD.md) | 文档结构、长度、链接、索引、写作和评审的强制规则 | 创建、拆分、链接、评审或维护文档 |
-| [`docs/DEVELOPMENT_LIFECYCLE_STANDARD.md`](DEVELOPMENT_LIFECYCLE_STANDARD.md) | 软件变更所需的阶段、资产、验证和退出条件 | 规划或执行项目变更 |
+| [`docs/standards/DOCUMENTATION_STANDARD.md`](standards/DOCUMENTATION_STANDARD.md) | 文档结构、长度、链接、索引、写作和评审的强制规则 | 创建、拆分、链接、评审或维护文档 |
+| [`docs/standards/DEVELOPMENT_LIFECYCLE_STANDARD.md`](standards/DEVELOPMENT_LIFECYCLE_STANDARD.md) | 软件变更所需的阶段、资产、验证和退出条件 | 规划或执行项目变更 |
 
 ## 支持路径
 

@@ -87,7 +87,7 @@ ES-005。它使用一个无依赖二进制 crate，并推迟尚未规定未来�
 文档。完成条件是 ES-001 至 ES-005 可以追溯到设计、政策、任务和检查。
 
 参考资料：本文档；架构决策；Rust 政策；[项目章程](../PROJECT_CHARTER.md)；
-[开发生命周期标准](../DEVELOPMENT_LIFECYCLE_STANDARD.md)。
+[开发生命周期标准](../standards/DEVELOPMENT_LIFECYCLE_STANDARD.md)。
 
 ### AT-002：创建最小 Rust 资产
 

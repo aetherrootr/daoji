@@ -8,7 +8,7 @@ Length assessment: The lifecycle stages remain together because later stages
 depend on the exit conditions of earlier stages. Readers should start with the
 change process and follow links to the stage required for the current work.
 
-Required use: The [Daoji project charter](PROJECT_CHARTER.md) requires project
+Required use: The [Daoji project charter](../PROJECT_CHARTER.md) requires project
 work to follow this standard. The charter has priority if the documents
 conflict.
 
