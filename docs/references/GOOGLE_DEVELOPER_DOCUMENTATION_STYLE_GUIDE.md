@@ -1,20 +1,20 @@
 # Google developer documentation style guide: Daoji profile
 
-Status: Adopted
-
 Document type: Editorial standard profile
 
 Source review date: 2026-07-27
 
 ## Purpose
 
-This document is the repository copy of the Google writing guidance that Daoji
-adopts. Authors and reviewers must use this file instead of treating the
+This document is the repository copy of the Google writing guidance that the
+authoritative documentation standard incorporates. Authors and reviewers must
+use this file instead of treating the
 current Google website as a project requirement.
 
 This file records the guidance that applies to Daoji. It is not a complete
 copy of the Google Developer Documentation Style Guide. Google-specific product
-rules do not apply to Daoji unless an accepted project document adopts them.
+rules do not apply to Daoji unless an authoritative project document
+incorporates them.
 
 ## Source and attribution
 
@@ -42,7 +42,7 @@ The project reviewed the following source pages:
 ## Rule priority
 
 The Daoji project charter defines the priority of writing rules. If this
-profile conflicts with the charter or an accepted project-specific policy, then
+profile conflicts with the charter or an authoritative project-specific policy, then
 authors and reviewers must follow the higher-priority project document.
 
 ## Global audience
@@ -74,7 +74,8 @@ authors and reviewers must follow the higher-priority project document.
 - Identify the person, agent, tool, or system that performs an action.
 - Use present tense for general behavior.
 - Use future tense only for an event that occurs in the future.
-- Do not use future tense to describe an unaccepted product capability.
+- Do not use future tense to describe a candidate or otherwise unmerged product
+  capability.
 - Use a direct, respectful, and professional tone.
 - Avoid language that is excessively formal, casual, promotional, or playful.
 
@@ -123,8 +124,9 @@ authors and reviewers must follow the higher-priority project document.
 ## Planned features
 
 - Clearly distinguish current behavior from planned behavior.
-- Do not describe an unaccepted planned feature as available.
-- Store detailed plans in accepted planning documents.
+- Do not describe a candidate or otherwise unmerged planned feature as available.
+- Store detailed plans in authoritative planning documents or candidate planning
+  assets in the current change proposal.
 - Use present-tense requirements in planning documents when possible.
 
 ## Exceptions
@@ -136,5 +138,6 @@ an applicable rule.
 ## Updates
 
 Changes to the upstream Google guide do not automatically change this file. To
-adopt an upstream change, the project must review the change, update this file,
-record a new source review date, and accept the repository change.
+incorporate an upstream change, the project must review the change, update this
+file, record a new source review date, and merge the change into the protected
+authoritative branch.

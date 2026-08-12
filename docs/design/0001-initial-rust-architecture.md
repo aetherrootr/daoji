@@ -1,10 +1,6 @@
 # Initial Rust architecture
 
-Status: Accepted 0
-
 Document type: Architecture decision
-
-Decision owner: Project owner
 
 Approval: The project owner approved Rust for the initial scaffold and deferred
 all additional toolchain decisions in the source conversation on 2026-08-02.
@@ -34,8 +30,9 @@ Daoji will use Rust for the initial implementation:
   requires a demonstrated component boundary.
 - This decision does not select a user-interface architecture or an additional
   language, runtime, package manager, or build system.
-- A future change may add another toolchain only when accepted requirements and
-  design justify its behavior, boundary, maintenance cost, and verification.
+- A future change may add another toolchain only when authoritative requirements
+  and design, or validated candidate requirements and design in the same change
+  proposal, justify its behavior, boundary, maintenance cost, and verification.
 
 Rust 2024 with a minimum supported Rust version of 1.85.1 is the initial
 toolchain. The scaffold has no runtime dependencies. Later dependencies require
@@ -53,7 +50,7 @@ the review defined in the Rust engineering policy.
   concise instead of restating a large set of rules that tools cannot enforce.
 - Rust can produce an optimized, standalone native binary without requiring a
   language runtime on the user's machine. Performance claims for functional
-  code still require benchmarks against accepted requirements.
+  code still require benchmarks against authoritative requirements.
 - Deferring other toolchains avoids additional lockfiles, duplicated checks,
   and premature interfaces before corresponding requirements exist.
 
@@ -78,15 +75,15 @@ instead selects Rust's conventional Cargo-centered checks and standalone binary.
 
 **TypeScript only:** This option matches OpenSpec and has strong Markdown and UI
 libraries. TypeScript is also viable. The initial scaffold did not select it
-because the accepted decision favors a standardized Rust verification suite and
+because this authoritative decision favors a standardized Rust verification suite and
 a native binary without a separately installed language runtime. This decision
 does not evaluate TypeScript for an unspecified future component.
 
 **Multiple toolchains immediately:** This option could prove an integration
-boundary early. It was not selected because no accepted requirement defines a
+boundary early. It was not selected because no authoritative requirement defines a
 capability that needs another toolchain. Adding one now would require additional
 policies, lockfiles, verification commands, and integration tests without adding
-accepted behavior.
+authoritative behavior.
 
 ## Consequences
 

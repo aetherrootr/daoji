@@ -1,15 +1,14 @@
 # Daoji document map
 
-Status: Effective draft 0
-
 Document type: Repository map
 
 ## Purpose
 
 This map is the primary documentation entry point for people and agents. Start
 with the governing documents, then follow only the paths needed for the current
-decision or task. English documents are authoritative unless a document states
-otherwise.
+decision or task. English documents at applicable paths in the authoritative
+branch are authoritative according to their type and scope. Candidate assets in
+a change proposal are not authoritative.
 
 ## Governing documents
 
@@ -24,17 +23,18 @@ otherwise.
 | Path | Role | Authority |
 | --- | --- | --- |
 | [`README.md`](README.md) | Project introduction and repository overview | Informative entry point |
-| [`docs/references/`](docs/references/) | Adopted profiles and informative external references | Each document states its status |
+| [`docs/references/`](docs/references/) | Incorporated profiles and informative external references | Each document states its type and role |
 | [`docs/translation/zh-CN/`](docs/translation/zh-CN/) | Simplified Chinese views of project documents | Non-authoritative translations |
-| [`docs/changes/`](docs/changes/) | Change entries, plans, records, and summaries | Each document states its status |
-| [`docs/design/`](docs/design/) | Architecture and important technical decisions | Each document states its status |
-| [`docs/policies/`](docs/policies/) | Reusable engineering rules and quality gates | Each document states its status |
+| [`docs/changes/`](docs/changes/) | Change entries, plans, records, and summaries | Workflow state belongs to each change entry |
+| [`docs/design/`](docs/design/) | Architecture and important technical decisions | Authority derives from the authoritative branch |
+| [`docs/policies/`](docs/policies/) | Reusable engineering rules and quality gates | Authority derives from the authoritative branch |
 
-## Current authoritative graph
+## Document graph
 
-The project charter requires the documentation and development lifecycle
-standards. The documentation standard adopts the repository Google style guide
-profile as lower-priority editorial guidance. The development lifecycle
+The project charter uses typed controlling relationships to require the
+documentation and development lifecycle standards. The documentation standard
+incorporates the repository Google style guide profile as lower-priority
+editorial guidance. The development lifecycle
 standard applies the charter and documentation rules to each change and links
 change entries to their detailed lifecycle assets.
 
@@ -42,8 +42,11 @@ The initial scaffold change combines its intent, requirements, plans, records,
 and summary in
 [`docs/changes/0001-engineering-scaffold.md`](docs/changes/0001-engineering-scaffold.md).
 Its separate architecture decision and Rust engineering policy are linked from
-that entry. A change that moves, replaces, or removes a mapped path must update
-this map.
+that entry. The
+[`Daoji overall architecture`](docs/design/0002-overall-architecture.md) defines
+the system's logical components, dependency rules, and generalization
+boundaries without resolving deferred implementation decisions. A change that
+moves, replaces, or removes a mapped path must update this map.
 
 
 ## Translations
