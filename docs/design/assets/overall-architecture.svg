@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1180" viewBox="0 0 1080 1180" role="img" aria-labelledby="title description">
+  <title id="title">Daoji overall system architecture</title>
+  <desc id="description">The user interface uses the Application API. The API exposes the Review and Evaluation System and Workflow Controller. The review system submits revision requests to the controller and observes work events. The controller submits scoped work through the Work Coordinator, which uses the AI Agent Gateway and provider adapters such as OpenCode and Pi.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .canvas{fill:#f8fafc}.surface{fill:#fff;stroke:#94a3b8;stroke-width:2}.application{fill:#eff6ff;stroke:#3b82f6;stroke-width:2.5}.control{fill:#eef2ff;stroke:#6366f1;stroke-width:2.5}.review{fill:#f0fdfa;stroke:#0f766e;stroke-width:2.5}.execution{fill:#fff7ed;stroke:#ea580c;stroke-width:2.5}.gateway{fill:#f8fafc;stroke:#475569;stroke-width:2.5}.adapter{fill:#fff;stroke:#64748b;stroke-width:2}.arrow{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow)}.event{fill:none;stroke:#0f766e;stroke-width:2;stroke-dasharray:8 7;marker-end:url(#arrow)}.label{fill:#0f172a;font:600 19px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-anchor:middle}.small{fill:#475569;font:500 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-anchor:middle}.caption{fill:#334155;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-anchor:middle;letter-spacing:.04em}@media(prefers-color-scheme:dark){.canvas{fill:#0f172a}.surface,.adapter{fill:#1e293b;stroke:#64748b}.application{fill:#172554;stroke:#60a5fa}.control{fill:#312e81;stroke:#818cf8}.review{fill:#134e4a;stroke:#2dd4bf}.execution{fill:#7c2d12;stroke:#fb923c}.gateway{fill:#1e293b;stroke:#94a3b8}.arrow{stroke:#94a3b8}.event{stroke:#5eead4}.label{fill:#f8fafc}.small,.caption{fill:#cbd5e1}}
+    </style>
+  </defs>
+  <rect class="canvas" width="1080" height="1180" rx="20"/>
+
+  <rect class="surface" x="365" y="45" width="350" height="90" rx="16" filter="url(#shadow)"/>
+  <text class="label" x="540" y="98">User Interface</text>
+  <path class="arrow" d="M540 135V190"/>
+
+  <rect class="application" x="330" y="195" width="420" height="105" rx="16" filter="url(#shadow)"/>
+  <text class="label" x="540" y="243">Application API</text>
+  <text class="small" x="540" y="270">Commands and views</text>
+
+  <path class="arrow" d="M460 300L315 385"/>
+  <path class="arrow" d="M620 300L765 385"/>
+
+  <rect class="review" x="90" y="390" width="410" height="130" rx="18" filter="url(#shadow)"/>
+  <text class="label" x="295" y="443">Review and Evaluation System</text>
+  <text class="small" x="295" y="472">Human-agent collaboration</text>
+  <text class="small" x="295" y="494">Evaluation and diff attribution</text>
+
+  <rect class="control" x="580" y="390" width="410" height="130" rx="18" filter="url(#shadow)"/>
+  <text class="label" x="785" y="443">Workflow Controller</text>
+  <text class="small" x="785" y="472">Process decisions and control</text>
+  <text class="small" x="785" y="494">Rules, checks, and extensions</text>
+
+  <path class="arrow" d="M500 455H572"/>
+  <text class="caption" x="536" y="443">REVISION REQUEST</text>
+
+  <path class="arrow" d="M750 520L620 615"/>
+  <path class="event" d="M460 615L330 520"/>
+
+  <rect class="execution" x="330" y="620" width="420" height="115" rx="18" filter="url(#shadow)"/>
+  <text class="label" x="540" y="670">Work Coordinator</text>
+  <text class="small" x="540" y="699">Scoped execution and recovery</text>
+
+  <path class="arrow" d="M540 735V820"/>
+
+  <rect class="gateway" x="330" y="825" width="420" height="115" rx="18" filter="url(#shadow)"/>
+  <text class="label" x="540" y="875">AI Agent Gateway</text>
+  <text class="small" x="540" y="904">Provider-neutral sessions and events</text>
+
+  <path class="arrow" d="M470 940L300 1020"/>
+  <path class="arrow" d="M610 940L780 1020"/>
+
+  <rect class="adapter" x="145" y="1025" width="310" height="95" rx="16" filter="url(#shadow)"/>
+  <text class="label" x="300" y="1070">OpenCode Adapter</text>
+  <text class="small" x="300" y="1095">Provider integration</text>
+
+  <rect class="adapter" x="625" y="1025" width="310" height="95" rx="16" filter="url(#shadow)"/>
+  <text class="label" x="780" y="1070">Pi Adapter</text>
+  <text class="small" x="780" y="1095">Provider integration</text>
+
+  <text class="label" x="990" y="1079">...</text>
+  <text class="caption" x="205" y="586">EVENTS AND DIFFS</text>
+  <text class="caption" x="860" y="586">SCOPED WORK</text>
+</svg>

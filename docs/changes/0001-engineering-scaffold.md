@@ -1,12 +1,12 @@
 # Engineering scaffold change
 
-Status: Accepted 0
-
 Document type: Combined change entry, intent, requirements, implementation plan,
 verification plan, implementation record, verification record, and change
 summary
 
-Decision owner: Project owner
+Governance note: This historical change predates repository-governed adoption.
+Its recorded approvals describe the process used at that time. Later changes follow
+the branch, review, check, and merge rules in the current project charter.
 
 ## Source request
 
@@ -108,7 +108,7 @@ traceability from ES-001 through ES-005 to design, policy, tasks, and checks.
 
 References: this document; the architecture decision; the Rust policy; the
 [project charter](../PROJECT_CHARTER.md); the
-[development lifecycle standard](../DEVELOPMENT_LIFECYCLE_STANDARD.md).
+[development lifecycle standard](../standards/DEVELOPMENT_LIFECYCLE_STANDARD.md).
 
 ### AT-002: Create minimal Rust assets
 
@@ -129,9 +129,9 @@ identified in the verification record until CI runs them.
 
 References: ES-002 through ES-004; the Rust policy; VP-001 through VP-007 below.
 
-The project owner approves the architecture and policy decisions. An agent may
-implement all three tasks. A person must review the resulting change and hosted
-CI evidence before merge.
+The project owner approved the architecture and policy decisions under the
+historical process. An agent could implement all three tasks. A person had to
+review the resulting change and hosted CI evidence before merge.
 
 ## Verification plan
 

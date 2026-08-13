@@ -1,10 +1,8 @@
 # Daoji documentation standard
 
-Status: Effective draft 0
-
 Document type: Documentation standard
 
-Required use: The [Daoji project charter](PROJECT_CHARTER.md) requires all
+Required use: The [Daoji project charter](../PROJECT_CHARTER.md) requires all
 project-maintained documentation to follow this standard. The charter has
 priority if the documents conflict.
 
@@ -25,8 +23,8 @@ entry point.
 Project documentation must have the following properties:
 
 - **Authoritative:** A reader can identify which document controls a decision.
-- **Purposeful:** Each document has a stated purpose, audience, scope, status,
-  and document type.
+- **Purposeful:** Each document has a stated purpose, audience, scope, and
+  document type.
 - **Concise:** The document contains enough information for its purpose and no
   unrelated detail.
 - **Linked:** The document links to controlling and related assets instead of
@@ -35,8 +33,9 @@ Project documentation must have the following properties:
   readers locate details progressively.
 - **Verifiable:** Requirements, procedures, and claims identify acceptance
   criteria or evidence when verification is applicable.
-- **Maintainable:** Ownership, replacement, and update responsibilities are
-  clear enough to prevent conflicting copies and stale guidance.
+- **Maintainable:** Repository path ownership, typed supersession relationships,
+  and update responsibilities are clear enough to prevent conflicting copies
+  and stale guidance.
 
 An authoritative document must provide the same controlling information to
 people and agents. Metadata may help tools interpret a document, but it must not
@@ -46,10 +45,16 @@ view is permitted when one authoritative source produces all views.
 
 ## Document structure
 
-Each authoritative document must identify its status and document type near the
-start. It must make its purpose, intended audience, scope, and applicable
-software or decisions explicit. Until the project accepts a metadata schema,
-prose and stable repository paths satisfy this requirement.
+Each document must identify its document type near the start. It must make its
+purpose, intended audience, scope, and applicable software or decisions
+explicit. Until the project defines a metadata schema, prose and stable
+repository paths satisfy this requirement.
+
+Document authority is derived from the document's path, type, and scope in the
+authoritative branch. An unmerged document is a candidate asset in its change
+proposal. Git commits identify exact repository snapshots, and Git blobs
+identify exact file revisions when needed. Only machine-readable formats can
+have schema versions.
 
 A document must place the information needed to decide whether to continue
 reading before supporting detail. When applicable, use this order:
@@ -93,14 +98,14 @@ technical material should use shorter sections than the default.
 A document that exceeds 1,200 words should include a summary and local
 navigation when headings alone do not make its structure obvious. A document
 that exceeds 2,500 words must record a split assessment near its metadata before
-acceptance. The assessment must identify independently useful detail and either
+merge. The assessment must identify independently useful detail and either
 split that detail or explain why readers benefit from one document. A document
 that exceeds 4,000 words must do one of the following:
 
 - Split detailed subjects into independently useful linked documents.
 - Demonstrate that readers must consume the content as one unit, and record the
-  reason, intended reading pattern, and review approval near the document
-  metadata as a length exception.
+  reason, intended reading pattern, and requested path-owner review near the
+  document metadata as a length exception.
 
 Translations should provide information units comparable to the authoritative
 source instead of enforcing an identical word or character count.
@@ -114,10 +119,12 @@ at different positions and with irrelevant material present.
 
 ## Progressive disclosure and document graph
 
-Documentation must form a directed graph of meaningful relationships. A
+Documentation must form a directed graph of meaningful, typed relationships. A
 document must link to a controlling document and to the next level of detail
-when those documents exist. Link text must identify the destination and, when
-the relationship is not obvious, explain why the reader should follow it.
+when those documents exist. Applicable relationship types include `controls`,
+`implements`, `verifies`, `derived-from`, `supersedes`, `superseded-by`, and
+historical-retention relationships. Link text must identify the destination and,
+when the relationship is not obvious, explain why the reader should follow it.
 
 Authors must prefer a link to an authoritative section over copied text. A
 short summary may repeat the minimum context needed to decide whether to follow
@@ -127,7 +134,8 @@ constraint that changes the meaning of the linked source.
 Authors must separate detail into another document when one or more of the
 following conditions apply:
 
-- The detail has a different audience, purpose, owner, or update cycle.
+- The detail has a different audience, purpose, repository governance path, or
+  update cycle.
 - The detail is independently reusable or addressable.
 - The detail obscures the current document's primary decision or task.
 - The document exceeds the maximum length and has no approved exception.
@@ -141,12 +149,13 @@ from the repository map or another mapped authoritative document.
 
 Links must use repository-relative paths for repository files. Authors must
 update affected links in the same change that moves, renames, replaces, or
-removes a document. A replacement document must identify the document that it
-replaces when history alone does not make the relationship clear.
+removes a document. A replacement must record typed `supersedes` and
+`superseded-by` relationships. Git history does not by itself express semantic
+supersession.
 
 ## Repository document map
 
-The project must maintain [`DOCUMENT_MAP.md`](../DOCUMENT_MAP.md) at the
+The project must maintain [`DOCUMENT_MAP.md`](../../DOCUMENT_MAP.md) at the
 repository root as the primary documentation index for people and agents. The
 map is an entry point, not a duplicate table of contents for every file.
 
@@ -156,13 +165,13 @@ The map must:
 - Identify key paths for lifecycle work, engineering policies, designs,
   operations, references, translations, and retained records when they exist.
 - State the purpose of each mapped path and which readers should start there.
-- Distinguish authoritative documents from translations and informative
-  references.
+- Distinguish documents on the authoritative branch from candidate assets,
+  translations, and informative references.
 - Remain concise enough to scan in one focused reading unit.
 
 A change that adds, moves, replaces, or removes a key path must update the map
-in the same change. A reviewer must check map reachability and changed links
-before accepting a documentation change.
+in the same change. Validation must check map reachability and changed links,
+and repository governance must obtain required reviews before merge.
 
 ## English writing rules
 
@@ -170,7 +179,7 @@ The project initially writes authoritative documents in English. When a
 translation has a different meaning, the English document is authoritative.
 Use a controlled technical style inspired by ASD Simplified Technical English
 and structured technical publications. The project must not claim compliance
-with an external standard unless an accepted policy defines and verifies that
+with an external standard unless an authoritative policy defines and verifies that
 compliance.
 
 The following rules apply:
@@ -191,15 +200,15 @@ The following rules apply:
   permission, and `will` only for future events.
 - Prefer wording that preserves meaning under machine translation.
 
-Clarity takes priority over stylistic variety. The adopted
-[Google developer documentation style guide profile](references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md)
-provides additional editorial rules.
+Clarity takes priority over stylistic variety. This standard incorporates the
+[Google developer documentation style guide profile](../references/GOOGLE_DEVELOPER_DOCUMENTATION_STYLE_GUIDE.md),
+which provides additional editorial rules.
 
 Authors and reviewers must apply documentation rules in this order:
 
 1. The project charter.
 2. This documentation standard.
-3. Applicable accepted project policies and document-type standards.
+3. Applicable authoritative project policies and document-type standards.
 4. The repository Google style guide profile.
 5. Other external references.
 
@@ -208,22 +217,24 @@ for a deliberate exception to an applicable rule.
 
 ## Review and maintenance
 
-Before acceptance, a documentation change must be reviewed for:
+Before merge, a documentation change must be validated and reviewed for:
 
 - Technical accuracy and consistency with controlling documents.
-- Clear audience, purpose, scope, status, and normative language.
+- Clear audience, purpose, scope, document type, candidate or authoritative
+  context, and normative language.
 - Compliance with the length budget or an approved exception.
 - Appropriate summaries, splits, and progressively disclosed links.
 - Valid links and reachability from the repository map.
 - Accessibility, translatability, and consistent terminology.
-- Updated related documents, translations, and replacement notices when
-  applicable.
+- Updated related documents, translations, and typed supersession or historical
+  relationships when applicable.
 
 Review effort must increase with the harm that an error can cause and the number
 of users, agents, or components that the document controls. Documentation
 defects and outdated documents are engineering defects. The project should keep
-one authoritative statement for each requirement and remove or mark obsolete
-copies unless a tool generates them from that statement.
+one authoritative statement for each requirement and remove other copies or
+relate retained copies through typed supersession or historical relationships,
+unless a tool generates them from that statement.
 
 ## Basis for the length defaults
 
