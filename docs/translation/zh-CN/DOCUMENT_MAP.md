@@ -33,10 +33,9 @@
 
 初始脚手架变更将其意图、需求、计划、记录和摘要合并在
 [`docs/changes/0001-engineering-scaffold.md`](../../changes/0001-engineering-scaffold.md)
-中。该条目链接到单独的架构决策和 Rust 工程政策。移动、替换或删除已映射路径的
-变更必须更新本地图。
-[Daoji 总体架构](design/0002-overall-architecture.md)定义系统的逻辑组件、依赖规则和
-泛化边界，而不解决已延后的实施决策。
+中。该条目链接到单独的架构决策和 Rust 工程政策。
+[Daoji 总体架构](design/0002-overall-architecture.md)定义系统的顶层组件、职责和协作
+边界，而不解决已延后的实施决策。移动、替换或删除已映射路径的变更必须更新本地图。
 
 相关简体中文译文：
 

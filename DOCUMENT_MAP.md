@@ -44,7 +44,7 @@ and summary in
 Its separate architecture decision and Rust engineering policy are linked from
 that entry. The
 [`Daoji overall architecture`](docs/design/0002-overall-architecture.md) defines
-the system's logical components, dependency rules, and generalization
+the system's top-level components, responsibilities, and collaboration
 boundaries without resolving deferred implementation decisions. A change that
 moves, replaces, or removes a mapped path must update this map.
 
